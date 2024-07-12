@@ -6,7 +6,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();
 
-const projectId = import.meta.env.VITE_APP_WALLET_PROJECT_ID || "";
+const projectId =
+	process.env.VITE_APP_WALLET_PROJECT_ID ||
+	import.meta.env.VITE_APP_WALLET_PROJECT_ID;
 
 const metadata = {
 	name: 'Web3Modal',
@@ -26,7 +28,7 @@ createWeb3Modal({
 	wagmiConfig: config,
 	projectId,
 	enableAnalytics: true,
-	enableOnramp: true, 
+	enableOnramp: true,
 });
 
 export function Web3ModalProvider({ children }: { children: React.ReactNode }) {
