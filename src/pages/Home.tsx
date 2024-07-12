@@ -5,7 +5,7 @@ const Home = () => {
 		<div className='mx-auto w-full flex flex-col items-center gap-y-3'>
 			<div className='flex justify-center items-center w-full h-100vh'>
 				<img
-					className='rounded-xl'
+					className='rounded-xl my-10 w-[90%]'
 					src='/AnonAadhaarBanner.png'
 					alt='banner'
 					width={900}
