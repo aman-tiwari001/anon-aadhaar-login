@@ -12,9 +12,11 @@ This application integrates Wallet Connect for user authentication and uses the 
 
 ## Usage
 **Connect Wallet:** 
-- Click on the "Connect Wallet" button to connect with wallet of yout choice (eg. Metamask).
+- Click on the "Connect Wallet" button to connect with wallet of your choice (eg. Metamask).
 - Follow the prompts to connect your crypto wallet using Wallet Connect.
-  
+
+
+![image](https://github.com/user-attachments/assets/f8945add-802c-43d2-9dac-fdae121b74ea)
  
   
 ![login](https://github.com/user-attachments/assets/1c3ae6ec-468c-42d1-a836-186f44d0a13b)
@@ -47,3 +49,8 @@ This application integrates Wallet Connect for user authentication and uses the 
 - **Anon Aadhaar:** zero-knowledge protocol that allows Aadhaar ID owners to prove their identity in a privacy preserving way.
 - **Tailwind CSS/Daisy UI:** For intuitive and modern user interfaces.
 
+
+## Project Demo Video
+https://www.youtube.com/watch?v=MGdLroZrRyM
+
+[![Watch the video](https://img.youtube.com/vi/MGdLroZrRyM/0.jpg)](https://www.youtube.com/watch?v=MGdLroZrRyM)
