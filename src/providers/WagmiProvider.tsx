@@ -4,17 +4,14 @@ import { WagmiProvider } from 'wagmi';
 import { arbitrum, mainnet } from 'wagmi/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-// 0. Setup queryClient
 const queryClient = new QueryClient();
 
-// 1. Get projectId from https://cloud.walletconnect.com
-const projectId = 'ef811fd94c7bfda690380827ae7704b7';
+const projectId = import.meta.env.VITE_APP_WALLET_PROJECT_ID || "";
 
-// 2. Create wagmiConfig
 const metadata = {
 	name: 'Web3Modal',
 	description: 'Web3Modal Example',
-	url: 'https://web3modal.com', // origin must match your domain & subdomain
+	url: 'https://web3modal.com',
 	icons: ['https://avatars.githubusercontent.com/u/37784886'],
 };
 
@@ -25,12 +22,11 @@ const config = defaultWagmiConfig({
 	metadata,
 });
 
-// 3. Create modal
 createWeb3Modal({
 	wagmiConfig: config,
 	projectId,
-	enableAnalytics: true, // Optional - defaults to your Cloud configuration
-	enableOnramp: true, // Optional - false as default
+	enableAnalytics: true,
+	enableOnramp: true, 
 });
 
 export function Web3ModalProvider({ children }: { children: React.ReactNode }) {

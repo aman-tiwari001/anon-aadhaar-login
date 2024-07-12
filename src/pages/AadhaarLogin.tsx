@@ -3,7 +3,7 @@ import {
 	useAnonAadhaar,
 	AnonAadhaarProof,
 } from '@anon-aadhaar/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useAccount } from 'wagmi';
 
 export default function Home() {
@@ -37,14 +37,10 @@ export default function Home() {
 		revealState: 'state',
 	};
 
-	useEffect(() => {
-		console.log('Anon Aadhaar status: ', anonAadhaar.status);
-	}, [anonAadhaar]);
-
 	return (
 		<div>
 			<div>
-				<div className='flex flex-col gap-y-3 rounded-xl backdrop-blur-sm p-6 border-green-300 border-dotted border-2 w-[60%] mx-auto mt-20'>
+				<div className='flex flex-col gap-y-3 rounded-xl backdrop-blur-sm p-6 border-green-300 border-dotted border-2 w-[60%] max-md:w-[95%] mx-auto mt-20'>
 					<h2 className='text-left text-2xl mb-2 text-green-200'>
 						Data you want to share with us ?
 					</h2>
@@ -101,7 +97,7 @@ export default function Home() {
 						Reveal State
 					</label>
 				</div>
-				<div className='mx-auto w-[60%] my-7 px-6 py-2 border-green-300 border-dotted border-2 rounded-xl'>
+				<div className='mx-auto w-[60%] max-md:w-[95%] my-7 px-6 py-2 border-green-300 border-dotted border-2 rounded-xl'>
 					<h2 className='text-xl text-white mb-3'>
 						Verify your identity using Anon Aaadhar, click login!
 					</h2>
@@ -125,7 +121,7 @@ export default function Home() {
 					</div>
 				</div>
 			</div>
-			<div className='w-[60%] mx-auto backdrop-blur-md px-6 py-2 border-green-300 border-dotted border-2 rounded-xl'>
+			<div className='w-[60%] max-md:w-[95%] mx-auto backdrop-blur-md px-6 py-2 border-green-300 border-dotted border-2 rounded-xl'>
 				{anonAadhaar?.status === 'logged-in' && (
 					<div className='mx-auto text-md text-white'>
 						<h2 className='my-2 text-xl'>✅ Your Proof is valid</h2>

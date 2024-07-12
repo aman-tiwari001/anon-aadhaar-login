@@ -16,12 +16,12 @@ const WalletLogin: FC = () => {
 
 	return (
 		<div draggable='false' className='bg flex items-center justify-center'>
-			<div className='bg-transparent backdrop-blur-md border-green-300 rounded-2xl border p-9 flex flex-col gap-y-4'>
+			<div className='bg-transparent max-md:w-[92%] backdrop-blur-md border-green-300 rounded-2xl border p-9 flex flex-col gap-y-4'>
 				<h2
 					draggable='false'
-					className='mb-10 text-green-200 text-4xl flex items-center gap-2'
+					className='mb-10 text-green-200 text-4xl flex items-center gap-2 max-md:text-2xl'
 				>
-					Login to <img draggable='false' src='/shield.png' width={60} />{' '}
+					Login to <img draggable='false' className='max-md:w-[36px]' src='/shield.png' width={60} />{' '}
 					SecureConnect
 				</h2>
 				<w3m-button
